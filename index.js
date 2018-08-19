@@ -680,7 +680,7 @@ class Kucoin {
    * }
    */
   getTicker(params = {}) {
-    return this.doRequest('get', '/' + params.pair + '/open/tick')
+    return this.doRequest('get', (params.pair ? ('/' + params.pair) : '') + '/open/tick')
   }
 
   /**
